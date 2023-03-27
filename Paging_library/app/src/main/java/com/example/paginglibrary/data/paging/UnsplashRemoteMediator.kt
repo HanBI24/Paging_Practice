@@ -51,7 +51,7 @@ class UnsplashRemoteMediator @Inject constructor(
 
             val response = unsplashApi.getAllImages(
                 page = currentPage,
-                per_page = ITEMS_PER_PAGE
+                perPage = ITEMS_PER_PAGE
             )
             val endOfPaginationReached = response.isEmpty()
 
