@@ -4,6 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.paginglibrary.util.Constants.UNSPLASH_IMAGE_TABLE
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -13,7 +14,9 @@ data class UnsplashImage(
     val id: String,
     @Embedded
     val urls: Urls,
-    val likes: Int,
+    @SerialName("likes")
+    val favorite: Int,
     @Embedded
-    val users: User
+    @SerialName("users")
+    val user: User
 )
