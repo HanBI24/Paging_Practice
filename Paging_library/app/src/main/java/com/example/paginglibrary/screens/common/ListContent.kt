@@ -2,6 +2,7 @@ package com.example.paginglibrary.screens.common
 
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -41,6 +42,8 @@ fun ListContent(
     items: LazyPagingItems<UnsplashImage>,
     modifier: Modifier = Modifier
 ) {
+    Log.d("Error", items.loadState.toString())
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(all = 12.dp),

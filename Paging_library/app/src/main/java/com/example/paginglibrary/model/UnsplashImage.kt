@@ -17,6 +17,5 @@ data class UnsplashImage(
     @SerialName("likes")
     val favorite: Int,
     @Embedded
-    @SerialName("users")
     val user: User
 )

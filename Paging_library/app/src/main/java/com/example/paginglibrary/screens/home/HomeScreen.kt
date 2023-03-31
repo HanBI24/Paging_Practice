@@ -1,6 +1,5 @@
 package com.example.paginglibrary.screens.home
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
