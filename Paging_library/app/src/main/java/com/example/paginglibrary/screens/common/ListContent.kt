@@ -35,6 +35,7 @@ import com.example.paginglibrary.model.User
 import com.example.paginglibrary.model.UserLinks
 import com.example.paginglibrary.ui.theme.FavoriteRed
 
+@ExperimentalCoilApi
 @Composable
 fun ListContent(items: LazyPagingItems<UnsplashImage>) {
     LazyColumn(
@@ -53,6 +54,7 @@ fun ListContent(items: LazyPagingItems<UnsplashImage>) {
     }
 }
 
+@ExperimentalCoilApi
 @Composable
 fun UnsplashItem(unsplashImage: UnsplashImage) {
     val painter = rememberImagePainter(data = unsplashImage.urls.regularImage) {
