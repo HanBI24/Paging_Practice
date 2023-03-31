@@ -37,7 +37,10 @@ import com.example.paginglibrary.ui.theme.FavoriteRed
 
 @ExperimentalCoilApi
 @Composable
-fun ListContent(items: LazyPagingItems<UnsplashImage>) {
+fun ListContent(
+    items: LazyPagingItems<UnsplashImage>,
+    modifier: Modifier = Modifier
+) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(all = 12.dp),
