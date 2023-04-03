@@ -12,11 +12,11 @@ import com.example.paginglibrary.util.Constants.ITEMS_PER_PAGE
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-@OptIn(ExperimentalPagingApi::class)
 class Repository @Inject constructor(
     private val unsplashApi: UnsplashApi,
     private val unsplashDatabase: UnsplashDatabase
 ){
+    @ExperimentalPagingApi
     fun getAllImages(): Flow<PagingData<UnsplashImage>> {
         val pagingSourceFactory = { unsplashDatabase.unsplashImageDao().getAllImages() }
         return Pager(
